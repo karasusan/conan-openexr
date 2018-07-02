@@ -13,7 +13,7 @@ class OpenEXRConan(ConanFile):
     exports = "mingw-fix.patch", "FindOpenEXR.cmake"
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False], "namespace_versioning": [True, False]}
-    default_options = "namespace_versioning=True"
+    default_options = "shared=False", "namespace_versioning=True"
     generators = "cmake"
     build_policy = "missing"
 
